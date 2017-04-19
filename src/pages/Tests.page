@@ -1,0 +1,3 @@
+<apex:page standardController="Opportunity" action="$Action.Opportunity.Open_opportunities_live">
+
+</apex:page>

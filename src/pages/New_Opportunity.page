@@ -1,0 +1,44 @@
+<apex:page standardController="Opportunity" extensions="New_Opportunity">
+    <apex:pageMessages />
+    <apex:form >
+        <apex:pageBlock title="Opportunity">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!DoSave}" />
+                <apex:commandButton value="Cancel" action="{!Cancel}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Opportunity.Offer_Title__c}" />
+                <apex:inputField value="{!Opportunity.CloseDate}" />
+                <apex:inputField value="{!Opportunity.TJM__c}" />
+                <apex:inputField value="{!Opportunity.Duration__c}" />
+                <apex:inputField value="{!Opportunity.Localisation_City__c}" />
+                <apex:inputField value="{!Opportunity.Localisation_Country__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Opportunity.Job_Description__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Account Infos">
+                <apex:inputText label="Name" value="{!Account_Name}" />
+                <apex:inputField label="Existing Account" value="{!Opportunity.AccountId}" />
+                <apex:inputText label="City" value="{!Account_City}" />
+                <apex:inputHidden />
+                <apex:inputText label="Country" value="{!Account_Country}" />
+                <apex:inputHidden />
+                <apex:inputText label="Account Contact First Name" value="{!OpptyContact_FirstName}" />
+                <apex:inputField label="Existing Account Contact" value="{!Opportunity.Oppty_Contact__c}" />
+                <apex:inputText label="Account Contact Last Name" value="{!OpptyContact_LastName}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Customer Infos">
+                <apex:inputText label="Name" value="{!Customer_Name}" />
+                <apex:inputField label="Existing Customer" value="{!Opportunity.Customer_Name__c}" />
+                <apex:inputText label="City" value="{!Customer_City}" />
+                <apex:inputHidden />
+                <apex:inputText label="Country" value="{!Customer_Country}" />
+                <apex:inputHidden />
+                <apex:inputText label="Customer Contact First Name" value="{!CustomerContact_FirstName}" />
+                <apex:inputField label="Existing Customer Contact" value="{!Opportunity.Customer_Contact__c}" />
+                <apex:inputText label="Customer Contact Last Name" value="{!CustomerContact_LastName}" />
+            </apex:pageBlockSection>                    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
